@@ -35,6 +35,10 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
     }
   });
 }
+document.addEventListener("keypress", function (event) {
+  makeSound(event.key);
+});
+
 function makeSound(key) {
   switch (buttonInnerHTML) {
     case "w":
@@ -69,6 +73,4 @@ function makeSound(key) {
       break;
   }
 }
-document.addEventListener("keypress", function () {
-  console.log(event);
-});
+
